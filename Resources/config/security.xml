@@ -8,6 +8,8 @@
         <!-- security/user -->
         <parameter key="doctrine.odm.mongodb.security.user.provider.class">IamPersistent\MongoDBAclBundle\Security\DocumentUserProvider</parameter>
         <parameter key="doctrine.odm.mongodb.security.acl.provider.class">IamPersistent\MongoDBAclBundle\Security\Acl\MutableAclProvider</parameter>
+        <parameter key="doctrine.odm.mongodb.security.acl.entry_collection">oid_collection</parameter>
+        <parameter key="doctrine.odm.mongodb.security.acl.oid_collection">oid_collection</parameter>
     </parameters>
 
     <services>
@@ -17,10 +19,8 @@
             <argument>%doctrine.odm.mongodb.security.acl.database%</argument>
             <argument type="service" id="security.acl.permission_granting_strategy" />
             <argument type="collection">
-            <!--
                 <argument key="entry_collection">%doctrine.odm.mongodb.security.acl.entry_collection%</argument>
                 <argument key="oid_collection">%doctrine.odm.mongodb.security.acl.oid_collection%</argument>
-            -->
             </argument>
             <argument type="service" id="security.acl.cache" on-invalid="null" />
         </service>
