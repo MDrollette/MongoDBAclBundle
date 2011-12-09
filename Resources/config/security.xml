@@ -8,7 +8,7 @@
         <!-- security/user -->
         <parameter key="doctrine.odm.mongodb.security.user.provider.class">IamPersistent\MongoDBAclBundle\Security\DocumentUserProvider</parameter>
         <parameter key="doctrine.odm.mongodb.security.acl.provider.class">IamPersistent\MongoDBAclBundle\Security\Acl\MutableAclProvider</parameter>
-        <parameter key="doctrine.odm.mongodb.security.acl.entry_collection">oid_collection</parameter>
+        <parameter key="doctrine.odm.mongodb.security.acl.entry_collection">entry_collection</parameter>
         <parameter key="doctrine.odm.mongodb.security.acl.oid_collection">oid_collection</parameter>
     </parameters>
 
